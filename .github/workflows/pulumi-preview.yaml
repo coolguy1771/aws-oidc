@@ -12,16 +12,16 @@ jobs:
     name: Update
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
       - name: Installing dependencies 📦️
         run: npm install
-      - uses: pulumi/auth-actions@v1
+      - uses: pulumi/auth-actions@80dec0d5e009a11565cbf87d9ef9103fc7d24198 # v1
         with:
           organization: coolguy1771
           requested-token-type: urn:pulumi:token-type:access_token:organization
       - name: Applying infrastructure 🚀
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@c7fad9e2f0b79653172b36538b8b34b3c0291952 # v6
         with:
           diff: true
           command: preview
