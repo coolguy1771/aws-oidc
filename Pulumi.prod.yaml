@@ -1,0 +1,4 @@
+config:
+  aws-oidc:escEnvironmentName: aws-oidc-admin
+  aws-oidc:escProject: aws
+  aws:region: us-east-1

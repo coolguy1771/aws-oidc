@@ -1,0 +1,24 @@
+name: Pulumi Update
+on:
+  push:
+    branches:
+      - main
+jobs:
+  up:
+    name: Update
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Installing dependencies 📦️
+        run: npm install
+      - uses: pulumi/auth-actions@v1
+        with:
+          organization: coolguy1771
+          requested-token-type: urn:pulumi:token-type:access_token:organization
+      - name: Applying infrastructure 🚀
+        uses: pulumi/actions@v6
+        with:
+          diff: false
+          command: up
+          stack-name: aws-oidc/prod
