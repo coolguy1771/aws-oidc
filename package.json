@@ -1,6 +1,7 @@
 {
     "name": "aws-ts-oidc-provider-pulumi-cloud",
     "main": "index.ts",
+    "packageManager": "npm@10.9.2",
     "devDependencies": {
         "@types/node": "22.10.5",
         "typescript": "5.7.2"
