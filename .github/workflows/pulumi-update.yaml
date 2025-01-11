@@ -25,4 +25,4 @@ jobs:
         with:
           diff: false
           command: up
-          stack-name: aws-oidc/prod
+          stack-name: coolguy1771/aws-oidc/prod

@@ -25,4 +25,4 @@ jobs:
         with:
           diff: true
           command: preview
-          stack-name: aws-oidc/prod
+          stack-name: coolguy1771/aws-oidc/prod
