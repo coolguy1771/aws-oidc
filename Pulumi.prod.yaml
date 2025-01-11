@@ -1,4 +1,4 @@
-imports:
+environment:
   - aws/aws-oidc-admin
 config:
   aws-oidc:escEnvironmentName: aws-oidc-admin
