@@ -5,6 +5,9 @@
     "config:best-practices",
     "security:openssf-scorecard",
     ":dependencyDashboard",
+    ":automergeBranch",
+    ":disableRateLimiting",
+    ":dependencyDashboard",
     ":semanticCommits",
     ":timezone(America/New_York)"
   ],
