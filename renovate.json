@@ -24,7 +24,7 @@
     },
     {
       "description": "Automerge non-major updates",
-      "matchManagers": ["js"],
+      "matchManagers": ["npm"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     }
