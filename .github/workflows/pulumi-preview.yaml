@@ -21,7 +21,7 @@ jobs:
           organization: coolguy1771
           requested-token-type: urn:pulumi:token-type:access_token:organization
       - name: Applying infrastructure 🚀
-        uses: pulumi/actions@13b8b7177d6fb736766875dac9b78aab07bd785f # v6
+        uses: pulumi/actions@9519177da243fd32cab35cdbf19cce1ab7472fcc # v6
         with:
           diff: true
           command: preview
