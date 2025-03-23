@@ -1,7 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
     "config:best-practices",
     "security:openssf-scorecard",
     ":dependencyDashboard",
@@ -15,7 +14,7 @@
   "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
   "packageRules": [
     {
-      "description": ["Auto-merge GitHub Actions for minor and patch"],
+      "description": "Auto-merge GitHub Actions for minor and patch",
       "matchManagers": ["github-actions"],
       "matchDatasources": ["github-tags"],
       "automerge": true,
@@ -23,14 +22,26 @@
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
-      "description": "Automerge non-major updates",
+      "description": "Automerge non-major updates for npm dependencies",
       "matchManagers": ["npm"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
+    },
+    {
+      "description": "Group all Pulumi package updates together",
+      "matchPackagePatterns": ["^@pulumi/"],
+      "groupName": "pulumi-packages",
+      "schedule": ["after 9pm on sunday"]
+    },
+    {
+      "description": "Limit TypeScript to monthly updates",
+      "matchPackageNames": ["typescript"],
+      "extends": [":monthly"]
     }
   ],
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true
+    "automerge": true,
+    "schedule": ["before 5am on monday"]
   }
 }
