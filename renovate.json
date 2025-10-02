@@ -11,32 +11,53 @@
     ":timezone(America/New_York)"
   ],
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
-  "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
+  "suppressNotifications": [
+    "prEditedNotification",
+    "prIgnoreNotification"
+  ],
   "packageRules": [
     {
       "description": "Auto-merge GitHub Actions for minor and patch",
-      "matchManagers": ["github-actions"],
-      "matchDatasources": ["github-tags"],
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchDatasources": [
+        "github-tags"
+      ],
       "automerge": true,
       "automergeType": "branch",
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
     },
     {
       "description": "Automerge non-major updates for npm dependencies",
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchManagers": [
+        "npm"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "automerge": true
     },
     {
       "description": "Group all Pulumi package updates together",
-      "matchPackagePatterns": ["^@pulumi/"],
       "groupName": "pulumi-packages",
-      "schedule": ["after 9pm on sunday"]
+      "schedule": [
+        "after 9pm on sunday"
+      ],
+      "matchPackageNames": [
+        "/^@pulumi//"
+      ]
     }
   ],
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
-    "schedule": ["before 5am on monday"]
+    "schedule": [
+      "before 5am on monday"
+    ]
   }
 }
