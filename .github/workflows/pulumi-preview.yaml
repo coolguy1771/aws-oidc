@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
       - name: Installing dependencies 📦️
         run: npm install
-      - uses: pulumi/auth-actions@80dec0d5e009a11565cbf87d9ef9103fc7d24198 # v1
+      - uses: pulumi/auth-actions@1c89817aab0c66407723cdef72b05266e7376640 # v1
         with:
           organization: coolguy1771
           requested-token-type: urn:pulumi:token-type:access_token:organization
