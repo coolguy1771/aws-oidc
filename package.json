@@ -9,7 +9,7 @@
     "dependencies": {
         "@pulumi/aws": "7.16.0",
         "@pulumi/command": "1.1.3",
-        "@pulumi/pulumi": "3.215.0",
+        "@pulumi/pulumi": "3.217.0",
         "@pulumi/pulumiservice": "0.32.0",
         "@pulumi/tls": "5.2.3"
     }
