@@ -3,7 +3,7 @@
     "main": "index.ts",
     "packageManager": "npm@11.16.0",
     "devDependencies": {
-        "@types/node": "24.12.4",
+        "@types/node": "24.13.0",
         "typescript": "5.9.3"
     },
     "dependencies": {
